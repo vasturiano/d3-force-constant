@@ -29,12 +29,15 @@
     "url": "https://github.com/vasturiano/d3-force-constant.git"
   },
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && rollup -c --banner \"$(preamble)\" -f umd -n d3 -o dist/d3-force-constant.js -- src/index.js",
-    "watch": "rollup -c -w -f umd -n d3 -o dist/d3-force-constant.js -- src/index.js",
+    "build": "rm -rf dist && mkdir dist && rollup -c --banner \"$(preamble)\"",
+    "watch": "rollup -c -w",
     "minify": "uglifyjs dist/d3-force-constant.js -o dist/d3-force-constant.min.js -c -m --preamble \"$(preamble)\"",
     "prepublish": "npm run build && npm run minify"
   },
-  "dependencies": {},
+  "dependencies": {
+    "kapsule": "^1.7.4",
+    "rollup-plugin-commonjs": "^8.2.1"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",

@@ -1,14 +1,22 @@
-import constant from './constant';
+import accessorFn from './accessor';
+import Kapsule from 'kapsule';
 
-export default function() {
-    let nodes,
-        strength = (node => 1),    // accessor: number > 0
-        direction = (node => 90);  // accessor: angle in degrees (0: right, 90: down)
+export default Kapsule({
+    props: {
+        strength: { default: 1 },   // accessor: number > 0
+        direction: { default: 90 }  // accessor: angle in degrees (0: right, 90: down)
+    },
+    methods: {
+        initialize(state, nodes) {  // called by engine to pass nodes object
+            state.nodes = nodes;
+        }
+    },
+    init(alpha, state) {    // called at each tick
 
-    function force(alpha) {
+        const strength = accessorFn(state.strength);
+        const direction = accessorFn(state.direction);
 
-        nodes.forEach(node => {
-
+        state.nodes.forEach(node => {
             const dv = polar2Cart(alpha * strength(node), direction(node));
 
             node.vx += dv.x;
@@ -18,33 +26,17 @@ export default function() {
         //
 
         function polar2Cart(d, a) {
+            const rad = deg2rad(a);
             return {
-                x: d * Math.cos(rad2deg(a)),
-                y: d * Math.sin(rad2deg(a))
+                x: d * Math.cos(rad),
+                y: d * Math.sin(rad)
             };
 
             //
 
-            function rad2deg(rad) {
-                return rad * 180 / Math.PI;
+            function deg2rad(deg) {
+                return deg * Math.PI / 180;
             }
         }
     }
-
-    function initialize() {}
-
-    force.initialize = function(_) {
-        nodes = _;
-        initialize();
-    };
-
-    force.strength = function(_) {
-        return arguments.length ? (strength = typeof _ === "function" ? _ : constant(+_), force) : strength;
-    };
-
-    force.direction = function(_) {
-        return arguments.length ? (direction = typeof _ === "function" ? _ : constant(+_), force) : direction;
-    };
-
-    return force;
-}
+});
