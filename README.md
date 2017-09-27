@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/d3-force-constant.png?compact=true)](https://nodei.co/npm/d3-force-constant/)
 
-A constant acceleration force type for the d3-force simulation engine.
+A constant acceleration force type for the [d3-force](https://github.com/d3/d3-force) simulation engine.
 
 This force accelerates nodes in a particular direction by a constant amount at each tick. Both the force strength and the direction can be set custom per node, or global for all the nodes equally.
 
