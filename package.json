@@ -23,8 +23,7 @@
   },
   "unpkg": "dist/d3-force-constant.min.js",
   "main": "dist/d3-force-constant.common.js",
-  "module": "src/index",
-  "jsnext:main": "src/index",
+  "module": "dist/d3-force-constant.module.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/vasturiano/d3-force-constant.git"
