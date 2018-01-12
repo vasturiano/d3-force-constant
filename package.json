@@ -36,6 +36,7 @@
     "prepublish": "npm run build && npm run minify && npm run build-module"
   },
   "dependencies": {
+    "accessor-fn": "^1.2.2",
     "kapsule": "^1.7.8"
   },
   "devDependencies": {
