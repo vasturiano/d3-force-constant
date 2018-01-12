@@ -8,6 +8,8 @@ This force accelerates nodes in a particular direction by a constant amount at e
 
 It can be used, for example to simulate weight caused by earth's gravity (constant acceleration pointing down), as well as wind blowing or a current flowing in an arbitrary direction.
 
+This force plugin is also compatible with [d3-force-3d](https://github.com/vasturiano/d3-force-3d) and can function in a one, two (default) or three dimensional space.
+
 ## Quick start
 
 ```
