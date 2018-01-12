@@ -3,6 +3,7 @@
 
   <script src="//unpkg.com/3d-force-graph"></script>
   <script src="//unpkg.com/d3-force-constant"></script>
+  <!--<script src="../../dist/d3-force-constant.js"></script>-->
 </head>
 
 <body>
@@ -17,11 +18,9 @@
     .graphData({ nodes: [...Array(100).keys()].map(() => ({})), links: [] })
     .d3AlphaDecay(0)
     .d3VelocityDecay(0)
-    // Deactivate existing forces
     .d3Force('center', null)
     .d3Force('charge', null)
-
-    .d3Force('constant', d3.forceConstant())
+    .d3Force('constant', f)
     (document.body);
 
   // Spin it
