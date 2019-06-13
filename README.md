@@ -1,6 +1,9 @@
-# d3.forceConstant
+d3.forceConstant
+==============
 
-[![NPM](https://nodei.co/npm/d3-force-constant.png?compact=true)](https://nodei.co/npm/d3-force-constant/)
+[![NPM package][npm-img]][npm-url]
+[![Build Size][build-size-img]][build-size-url]
+[![Dependencies][dependencies-img]][dependencies-url]
 
 A constant acceleration force type for the [d3-force](https://github.com/d3/d3-force) simulation engine.
 
@@ -41,3 +44,10 @@ d3.forceSimulation()
 | <b>direction</b>([<i>num</i> or <i>fn</i>]) | Getter/setter for the node object direction accessor function (`fn(node)`) or a constant (`num`) for all nodes. This defines the orientation of the force in the XY plane in degrees, with `0` representing only X increases (rightwards in SVG convention) and `90` only Y increases (downwards).  | 90 |
 | <b>zAngle</b>([<i>num</i> or <i>fn</i>]) | Getter/setter for the node object Z axis angle accessor function (`fn(node)`) or a constant (`num`) for all nodes. Mainly applicable in 3D scenarios when using [d3-force-3d](https://github.com/vasturiano/d3-force-3d). This defines the angle of the force in degrees against the XY plane, with `0` indicating parallel (no Z influence) and `-90` (far) / `90` (near) perpendicular (`direction` has no effect in this case). Values below `-90` or above `90` invert direction on the XY plane. | 0 |
 
+
+[npm-img]: https://img.shields.io/npm/v/d3-force-constant.svg
+[npm-url]: https://npmjs.org/package/d3-force-constant
+[build-size-img]: https://img.shields.io/bundlephobia/minzip/d3-force-constant.svg
+[build-size-url]: https://bundlephobia.com/result?p=d3-force-constant
+[dependencies-img]: https://img.shields.io/david/vasturiano/d3-force-constant.svg
+[dependencies-url]: https://david-dm.org/vasturiano/d3-force-constant
