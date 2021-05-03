@@ -8,9 +8,10 @@ export default Kapsule({
     zAngle: { default: 0 }      // accessor: angle with the 2-dimensional xy plane in degrees (positive: close, negative: far (WebGL coords)). Values of -90/90 cancel motion in xy plane. Values above 90 inverse direction.
   },
   methods: {
-    initialize(state, nodes, numDimensions = 2) {  // called by engine to pass node objects and numDimensions
+    initialize(state, nodes, ...args) {  // called by engine to pass node objects and numDimensions
+      const nDim = args.find(arg => [1, 2, 3].includes(arg)) || 2;
       state.nodes = nodes;
-      state.nDim = numDimensions;
+      state.nDim = nDim;
     }
   },
   init(alpha, state) { // called at each tick
