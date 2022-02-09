@@ -3,7 +3,7 @@ d3.forceConstant
 
 [![NPM package][npm-img]][npm-url]
 [![Build Size][build-size-img]][build-size-url]
-[![Dependencies][dependencies-img]][dependencies-url]
+[![NPM Downloads][npm-downloads-img]][npm-downloads-url]
 
 A constant acceleration force type for the [d3-force](https://github.com/d3/d3-force) simulation engine.
 
@@ -15,19 +15,19 @@ This force plugin is also compatible with [d3-force-3d](https://github.com/vastu
 
 ## Quick start
 
-```
+```js
 import d3ForceConstant from 'd3-force-constant';
 ```
 or
-```
+```js
 d3.forceConstant = require('d3-force-constant');
 ```
 or even
-```
+```html
 <script src="//unpkg.com/d3-force-constant"></script>
 ```
 then
-```
+```js
 d3.forceSimulation()
     .nodes(<myNodes>)
     .force('gravity', d3.forceConstant()
@@ -45,9 +45,9 @@ d3.forceSimulation()
 | <b>zAngle</b>([<i>num</i> or <i>fn</i>]) | Getter/setter for the node object Z axis angle accessor function (`fn(node)`) or a constant (`num`) for all nodes. Mainly applicable in 3D scenarios when using [d3-force-3d](https://github.com/vasturiano/d3-force-3d). This defines the angle of the force in degrees against the XY plane, with `0` indicating parallel (no Z influence) and `-90` (far) / `90` (near) perpendicular (`direction` has no effect in this case). Values below `-90` or above `90` invert direction on the XY plane. | 0 |
 
 
-[npm-img]: https://img.shields.io/npm/v/d3-force-constant.svg
+[npm-img]: https://img.shields.io/npm/v/d3-force-constant
 [npm-url]: https://npmjs.org/package/d3-force-constant
-[build-size-img]: https://img.shields.io/bundlephobia/minzip/d3-force-constant.svg
+[build-size-img]: https://img.shields.io/bundlephobia/minzip/d3-force-constant
 [build-size-url]: https://bundlephobia.com/result?p=d3-force-constant
-[dependencies-img]: https://img.shields.io/david/vasturiano/d3-force-constant.svg
-[dependencies-url]: https://david-dm.org/vasturiano/d3-force-constant
+[npm-downloads-img]: https://img.shields.io/npm/dt/d3-force-constant
+[npm-downloads-url]: https://www.npmtrends.com/d3-force-constant
