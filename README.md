@@ -18,11 +18,7 @@ This force plugin is also compatible with [d3-force-3d](https://github.com/vastu
 ```js
 import d3ForceConstant from 'd3-force-constant';
 ```
-or
-```js
-d3.forceConstant = require('d3-force-constant');
-```
-or even
+or using a *script* tag
 ```html
 <script src="//unpkg.com/d3-force-constant"></script>
 ```
