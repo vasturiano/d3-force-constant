@@ -20,7 +20,7 @@ import d3ForceConstant from 'd3-force-constant';
 ```
 or using a *script* tag
 ```html
-<script src="//unpkg.com/d3-force-constant"></script>
+<script src="//cdn.jsdelivr.net/npm/d3-force-constant"></script>
 ```
 then
 ```js
