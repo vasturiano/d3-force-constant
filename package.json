@@ -1,6 +1,6 @@
 {
   "name": "d3-force-constant",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "A constant acceleration force type for the d3-force simulation engine.",
   "keywords": [
     "d3",
