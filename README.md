@@ -40,6 +40,11 @@ d3.forceSimulation()
 | <b>direction</b>([<i>num</i> or <i>fn</i>]) | Getter/setter for the node object direction accessor function (`fn(node)`) or a constant (`num`) for all nodes. This defines the orientation of the force in the XY plane in degrees, with `0` representing only X increases (rightwards in SVG convention) and `90` only Y increases (downwards).  | 90 |
 | <b>zAngle</b>([<i>num</i> or <i>fn</i>]) | Getter/setter for the node object Z axis angle accessor function (`fn(node)`) or a constant (`num`) for all nodes. Mainly applicable in 3D scenarios when using [d3-force-3d](https://github.com/vasturiano/d3-force-3d). This defines the angle of the force in degrees against the XY plane, with `0` indicating parallel (no Z influence) and `-90` (far) / `90` (near) perpendicular (`direction` has no effect in this case). Values below `-90` or above `90` invert direction on the XY plane. | 0 |
 
+## ❤️ Support This Project
+
+If you find this module useful and would like to support its development, you can [buy me a ☕](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L398E7PKP47E8&currency_code=USD&source=url). Your contributions help keep open-source sustainable!
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L398E7PKP47E8&currency_code=USD&source=url)
+
 
 [npm-img]: https://img.shields.io/npm/v/d3-force-constant
 [npm-url]: https://npmjs.org/package/d3-force-constant
